@@ -1,11 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green: #02976c;
+  --light-green: #12b596;
+  --grey: #acacac;
+  --white: #fff;
+  --black: #000;
+  --blue: #0071ff;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  background: #edf0f4 0% 0% no-repeat padding-box;
+}
+.MuiTableCell-root {
+  font-family: "Fira Sans", sans-serif;
 }
 
+.MuiTableCell-body {
+  color: var(--grey);
+}
+.MuiButton-root {
+  text-transform: capitalize;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +35,216 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* .layout {
+  max-width: 1500px;
+  width: 96%;
+  margin: 0 auto;
+  padding: 1rem;
+} */
+
+.logo-txt h1 {
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* .logo-txt p {
+  font-size: 14px;
+  color: var(--grey);
+} */
+
+/* Text Colors */
+/* .light-grey-txt {
+  color: var(--grey);
+} */
+/* Custome Card */
+.custom-card {
+  background-color: #fff;
+  box-shadow: 0px 11px 17px #d3dae270;
+  border-radius: 15px;
+  padding: 25px;
+}
+.form-check-input:checked {
+  background-color: var(--light-green) !important;
+  border-color: var(--light-green) !important;
+}
+.butn {
+  border-radius: 15px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+/* .btn-lrg {
+  padding: 1rem 1.5rem;
+} */
+
+.btn-sml {
+  padding: 8px 35px;
+}
+.butn:hover {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  /* transform: scale(1.1) translateY(-5px);
+  box-shadow: 0px 11px 17px #d3dae270;
+  opacity: 0.8; */
+}
+
+.btn-outline:hover,
+.btn-outline {
+  background-color: var(--white);
+  border: 1px solid var(--light-green);
+  color: var(--light-green);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0px 11px 17px #d3dae270;
+  opacity: 0.8;
+}
+
+.butn:active {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  transform: scale(1) translateY(5px);
+  box-shadow: 0px 11px 17px #d3dae270;
+}
+
+.btn-outline {
+  background-color: var(--white);
+  border: 1px solid var(--light-green);
+  color: var(--light-green);
+}
+
+.btn-green {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  color: var(--white);
+}
+
+.btn-light-green {
+  background-color: var(--light-green);
+  border: 1px solid var(--light-green);
+  color: var(--white);
+}
+
+.btn-grey {
+  background-color: var(--grey);
+  border: 1px solid var(--grey);
+  color: var(--white);
+}
+
+.btn-white {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  color: var(--black);
+}
+
+/* .btn-white:hover {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+} */
+
+.btn-blue {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  color: var(--white);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  transition: none;
+  background-color: var(--grey);
+  border: 1px solid var(--grey);
+  color: var(--white);
+}
+
+button:disabled:hover {
+  transform: none;
+  background-color: var(--grey);
+  border: 1px solid var(--grey);
+}
+
+.btn-sub {
+  padding: 7px 34px;
+}
+
+@media screen and (max-width: 1024px) {
+  .butn {
+    padding: 0.8rem 1.1rem;
+  }
+}
+
+.btn-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Table */
+/* 
+.product-feed-tbl table thead th {
+  margin: 0;
+  padding: 0.8rem;
+  text-align: left;
+  background: #f3f3f3;
+}
+.product-feed-tbl table thead th :first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.product-feed-tbl table thead th :last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.product-feed-tbl thead tr td:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.product-feed-tbl thead tr td:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.product-feed-tbl thead tr td {
+  padding: 1.2rem 1rem;
+  font-weight: bold;
+} */
+
+.product-feed-tbl td,
+.product-feed-tbl th {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.product-feed-tbl thead tr th:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.product-feed-tbl thead tr th:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.product-feed-tbl tbody tr {
+  border-bottom: 0.5px solid #e8e8e8;
+}
+
+/* Light Grey Background */
+
+.light-grey-bg {
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  box-shadow: 0px 11px 17px #d3dae270;
+  border-radius: 15px;
+  padding: 16px 15px !important;
+}
+
+/* Mui Paper */
+
+.MuiPaper-root {
+  box-shadow: none;
 }
